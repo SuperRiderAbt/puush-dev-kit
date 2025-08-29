@@ -16,7 +16,7 @@ It is designed to expose only the **essential functions and events**, while keep
 
 ---
 
-## 🏗 Main Contract
+## 🔴🔵 Main Contract
 
 - **Name**: `PuushdotFun`  
 - **Purpose**: Factory / Router  
