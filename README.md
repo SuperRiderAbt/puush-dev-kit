@@ -20,6 +20,12 @@ Puush on Cronos mainnet.
 | V104 | Legacy untaxed launcher | `0x0F73F73707C0f365808b1C50a0187E17E7F897c9` | `Puush.min.json` |
 | V106 | Taxed launcher | `0xE591af00B27Ef58C1F4C4A7a4Bb975c57a891633` | `PuushV106.min.json` |
 
+## 🔀 Which Launcher To Use
+
+- Standard legacy launches use the V104 launcher contract.
+- New taxed launches use the V106 launcher contract.
+- If you are indexing or supporting both flows, watch both launcher contracts.
+
 ## 📦 Included Files
 
 | File | Purpose |
