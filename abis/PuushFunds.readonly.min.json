@@ -1,0 +1,171 @@
+[
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "initialCoinReserve",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "coinsSold",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "SUPPLY_FOR_SALE",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "START_PRICE",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "END_PRICE",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "isGraduated",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "bool"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "coin",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "getFunds",
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            },
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "pure",
+        "name": "getAmountToBuy",
+        "inputs": [
+            {
+                "name": "currentSupplySold",
+                "type": "uint256"
+            },
+            {
+                "name": "ethSent",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "pure",
+        "name": "getCost",
+        "inputs": [
+            {
+                "name": "currentSupplySold",
+                "type": "uint256"
+            },
+            {
+                "name": "amountToBuy",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "totalCostWithFee",
+                "type": "uint256"
+            },
+            {
+                "name": "cost",
+                "type": "uint256"
+            },
+            {
+                "name": "fee",
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "name": "getReturn",
+        "inputs": [
+            {
+                "name": "currentSupplySold",
+                "type": "uint256"
+            },
+            {
+                "name": "amountToSell",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "totalReturnWithFee",
+                "type": "uint256"
+            },
+            {
+                "name": "ethReturn",
+                "type": "uint256"
+            },
+            {
+                "name": "fee",
+                "type": "uint256"
+            }
+        ]
+    }
+]
