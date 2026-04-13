@@ -11,6 +11,49 @@ Puush on Cronos mainnet.
 | Chain ID | `25` |
 | Public RPC | `https://evm.cronos.org` |
 
+## 📡 Public External API
+
+For token discovery and metadata lookups, Puush also exposes a public read-only
+API alongside the on-chain ABIs.
+
+| Item | Value |
+| --- | --- |
+| Base URL | `https://api.puush.fun` |
+| Version | `v1` |
+| Auth | none |
+| CORS | `Access-Control-Allow-Origin: *` |
+| Rate Limit | `400` requests per `60` seconds per IP |
+
+Current public routes:
+- `GET /api/v1/external` returns a paginated token list.
+- `GET /api/v1/external/token?id=<tokenAddress>` returns one token by contract address.
+
+Useful request conventions:
+- `networkId=25` filters to Cronos mainnet tokens.
+- `graduated=true|false` filters graduated vs non-graduated launches.
+- `sort=-lastActivity` is the default and returns newest activity first.
+- `page` is zero-based.
+- `limit` defaults to `24` and is capped at `100`.
+
+Useful response conventions:
+- `lastActivity` and `createdAt` are ISO 8601 UTC strings.
+- `startTime` is a Unix-seconds timestamp string or `null`.
+- Large numeric values such as `totalSupplyWEI`, `initialBuyWEI`, `marketCapUSD`,
+  and `lastPriceCRO` are returned as strings.
+
+Quick start examples:
+
+```bash
+curl 'https://api.puush.fun/api/v1/external?networkId=25&page=0&graduated=false&sort=-lastActivity&limit=50'
+```
+
+```bash
+curl 'https://api.puush.fun/api/v1/external/token?id=0xD88f0AeB84c81e2c51d662FA065189B8533B8a22'
+```
+
+For the full `ExternalCoinInfo` schema and additional examples, use
+[`../../api/docs.md`](../../api/docs.md) as the source of truth.
+
 ## 🚀 Production Contracts
 
 ### Launchers
